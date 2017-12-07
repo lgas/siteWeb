@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Sophrologue-Relaxologue{% endblock %}</title>
+        {% block stylesheets %}
+            {#<link rel="stylesheet" href="build\css\app.css">#}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+            <style>
+                body {
+                    background-color: #d5e5c9;
+                    min-height: 100vh;
+                }
+                .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+                    background-color: #69922c;
+                    color: #fff;
+                }
+
+                .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+                    border-color: #69922c;
+                }
+
+                .nav-tabs .nav-link, .nav-tabs .nav-link {
+                    color: #69922c;
+                }
+
+                #mainTitle {
+                    color :  #fff;
+                }
+                #content {
+                    height: 100%;
+                    min-height: 100%;
+                }
+
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+        <header class="container-fluid">
+            {% block header %}
+                {#<img src="https://i.pinimg.com/236x/70/d9/66/70d966b22fb9b13bfc465cf9a9300c80--dragonflies-coloring.jpg" alt="logo" class="img-thumbnail img-responsive d-inline-block">#}
+                <h1 id="mainTitle" class="text-center{# d-inline-block#}">Sophrologue - Relaxologue</h1>
+            {% endblock %}
+        </header>
+
+        <nav class="nav nav-tabs ">
+            {% block nav %}
+
+                <a class="nav-item nav-link active" href="#">Accueil</a>
+                <a class="nav-item nav-link" href="#">Sophrologie</a>
+                <a class="nav-item nav-link" href="#">Relaxologie</a>
+                <a class="nav-item nav-link" href="#">Compétences</a>
+                <a class="nav-item nav-link" href="#">Parcours</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+
+            {% endblock %}
+        </nav>
+
+        <section id="content">
+            <div class="d-flex flex-row">
+                <div class="p-10">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="p-2">
+                    {% block aside %}{% endblock %}
+                </div>
+            </div>
+        </section>
+
+        <footer class="container-fluid">
+            {% block footer %}
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto"><a class="text-dark" href="/">Contact</a></div>
+                    <div class="col-md-auto"><a class="text-dark" href="/">Mentions légales</a></div>
+                    <div class="col-md-auto"><a class="text-dark" href="/">Ethique et déontologie</a></div>
+                    <div class="w-100"></div>
+                    <div class="col-md-auto"><p>Copyright © 2017 Sophrologue-Relaxologue - Tous droits réservés Designed by MOA.</p></div>
+                </div>
+
+
+            {% endblock %}
+        </footer>
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+            {#<script src="{{ asset('build/js/app.js') }}"></script>#}
+        {% endblock %}
+    </body>
+</html>
