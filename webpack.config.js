@@ -21,6 +21,12 @@ Encore
 
     // uncomment for legacy applications that require $/jQuery as a global variable
     .autoProvidejQuery()
+    .autoProvideVariables({
+        $: 'jquery',
+        jQuery : 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default'],
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

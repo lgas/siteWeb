@@ -4,35 +4,9 @@
         <meta charset="UTF-8">
         <title>{% block title %}Sophrologue-Relaxologue{% endblock %}</title>
         {% block stylesheets %}
-            {#<link rel="stylesheet" href="build\css\app.css">#}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-            <style>
-                body {
-                    background-color: #d5e5c9;
-                    min-height: 100vh;
-                }
-                .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-                    background-color: #69922c;
-                    color: #fff;
-                }
+            <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+            {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">#}
 
-                .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-                    border-color: #69922c;
-                }
-
-                .nav-tabs .nav-link, .nav-tabs .nav-link {
-                    color: #69922c;
-                }
-
-                #mainTitle {
-                    color :  #fff;
-                }
-                #content {
-                    height: 100%;
-                    min-height: 100%;
-                }
-
-            </style>
         {% endblock %}
     </head>
     <body>
@@ -51,7 +25,7 @@
                 <a class="nav-item nav-link" href="#">Relaxologie</a>
                 <a class="nav-item nav-link" href="#">Compétences</a>
                 <a class="nav-item nav-link" href="#">Parcours</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
+                <a class="nav-item nav-link" href="#">Contact <span class="fa fa-envelope"></span></a>
 
             {% endblock %}
         </nav>
@@ -82,10 +56,10 @@
         </footer>
 
         {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-            {#<script src="{{ asset('build/js/app.js') }}"></script>#}
+            {#<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>#}
+            {#<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>#}
+            {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>#}
+            <script src="{{ asset('build/js/app.js') }}"></script>
         {% endblock %}
     </body>
 </html>
