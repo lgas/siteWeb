@@ -1,4 +1,6 @@
-require('../css/app.scss');
-require('bootstrap');
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+});
 
-var $ = require('jquery');
+import'bootstrap';
+
